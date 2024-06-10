@@ -1,5 +1,8 @@
+import haxe.ds.GenericStack;
 class Main {
     public static function main() {
-        trace("yay");
+        var a = new GenericStack();
+        a.add(1);
+        trace(a);
     }
 }
