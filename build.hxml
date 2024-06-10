@@ -1,0 +1,16 @@
+-cp .
+-debug
+-dce full
+--each
+
+-main Main
+-js bin/js/main.js
+--next
+
+-main Main
+--lua bin/lua/main.lua
+--next
+
+-main Main
+--cs bin/cs
+--next
