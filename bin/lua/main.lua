@@ -192,6 +192,8 @@ __haxe_Exception = _hx_e()
 __haxe_Log = _hx_e()
 __haxe_NativeStackTrace = _hx_e()
 __haxe_ValueException = _hx_e()
+__haxe_ds_GenericCell = _hx_e()
+__haxe_ds_GenericStack = _hx_e()
 __haxe_exceptions_PosException = _hx_e()
 __haxe_exceptions_NotImplementedException = _hx_e()
 __haxe_iterators_ArrayIterator = _hx_e()
@@ -549,7 +551,9 @@ end
 Main.new = {}
 Main.__name__ = true
 Main.main = function() 
-  __haxe_Log.trace("yay", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=3,className="Main",methodName="main"}));
+  local a = __haxe_ds_GenericStack.new();
+  a.head = __haxe_ds_GenericCell.new(1, a.head);
+  __haxe_Log.trace(a, _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=6,className="Main",methodName="main"}));
 end
 
 Math.new = {}
@@ -849,6 +853,37 @@ __haxe_ValueException.__name__ = true
 __haxe_ValueException.prototype = _hx_e();
 __haxe_ValueException.__super__ = __haxe_Exception
 setmetatable(__haxe_ValueException.prototype,{__index=__haxe_Exception.prototype})
+
+__haxe_ds_GenericCell.new = function(elt,next) 
+  local self = _hx_new()
+  __haxe_ds_GenericCell.super(self,elt,next)
+  return self
+end
+__haxe_ds_GenericCell.super = function(self,elt,next) 
+  self.elt = elt;
+  self.next = next;
+end
+__haxe_ds_GenericCell.__name__ = true
+
+__haxe_ds_GenericStack.new = function() 
+  local self = _hx_new(__haxe_ds_GenericStack.prototype)
+  __haxe_ds_GenericStack.super(self)
+  return self
+end
+__haxe_ds_GenericStack.super = function(self) 
+end
+__haxe_ds_GenericStack.__name__ = true
+__haxe_ds_GenericStack.prototype = _hx_e();
+__haxe_ds_GenericStack.prototype.toString = function(self) 
+  local a = Array.new();
+  local l = self.head;
+  while (l ~= nil) do _hx_do_first_1 = false;
+    
+    a:push(l.elt);
+    l = l.next;
+  end;
+  do return Std.string(Std.string("{") .. Std.string(a:join(","))) .. Std.string("}") end
+end
 
 __haxe_exceptions_PosException.new = function(message,previous,pos) 
   local self = _hx_new(__haxe_exceptions_PosException.prototype)

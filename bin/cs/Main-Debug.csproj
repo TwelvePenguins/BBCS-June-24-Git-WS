@@ -77,6 +77,8 @@
 	
     <Compile Include="src\haxe\exceptions\NotImplementedException.cs"/>
 	
+    <Compile Include="src\haxe\ds\GenericStack.cs"/>
+	
     <Compile Include="src\haxe\iterators\ArrayKeyValueIterator.cs"/>
 	
     <Compile Include="src\haxe\ValueException.cs"/>

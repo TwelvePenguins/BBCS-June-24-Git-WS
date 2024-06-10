@@ -15,7 +15,7 @@ public class Main : global::haxe.lang.HxObject {
 	
 	
 	public Main() {
-		#line 1 "C:\\Users\\picokatx\\Documents\\genocide\\BBCS-June-24-Git-WS\\Main.hx"
+		#line 2 "C:\\Users\\picokatx\\Documents\\genocide\\BBCS-June-24-Git-WS\\Main.hx"
 		global::Main.__hx_ctor__Main(this);
 	}
 	#line default
@@ -26,8 +26,11 @@ public class Main : global::haxe.lang.HxObject {
 	
 	public static void main() {
 		unchecked {
-			#line 3 "C:\\Users\\picokatx\\Documents\\genocide\\BBCS-June-24-Git-WS\\Main.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), "yay", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "Main", "Main.hx"}, new int[]{1981972957}, new double[]{((double) (3) )}));
+			#line 4 "C:\\Users\\picokatx\\Documents\\genocide\\BBCS-June-24-Git-WS\\Main.hx"
+			global::haxe.ds.GenericStack<int> a = new global::haxe.ds.GenericStack<int>();
+			a.head = new global::haxe.ds.GenericCell<int>(((int) (1) ), ((global::haxe.ds.GenericCell<int>) (a.head) ));
+			#line 6 "C:\\Users\\picokatx\\Documents\\genocide\\BBCS-June-24-Git-WS\\Main.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), a, default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "Main", "Main.hx"}, new int[]{1981972957}, new double[]{((double) (6) )}));
 		}
 		#line default
 	}

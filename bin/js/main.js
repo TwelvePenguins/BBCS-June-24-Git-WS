@@ -2,7 +2,15 @@
 (function ($global) { "use strict";
 var Main = function() { };
 Main.main = function() {
-	console.log("Main.hx:3:","yay");
+	var a = new haxe_ds_GenericStack();
+	a.head = new haxe_ds_GenericCell(1,a.head);
+	console.log("Main.hx:6:",a);
+};
+var haxe_ds_GenericCell = function(elt,next) {
+	this.elt = elt;
+	this.next = next;
+};
+var haxe_ds_GenericStack = function() {
 };
 var haxe_iterators_ArrayIterator = function(array) {
 	this.current = 0;

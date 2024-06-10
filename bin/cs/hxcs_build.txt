@@ -348,6 +348,11 @@ M cs.system.globalization.CompareOptions
 M System.Reflection.Emit.GenericTypeParameterBuilder
 M System.Collections.Generic.IEnumerator`1
 M System.Reflection.Emit.EventBuilder
+M haxe.ds.GenericStack
+C haxe.ds.GenericCell
+C haxe.ds.GenericCell
+C haxe.ds.GenericStack
+C haxe.ds.GenericStack
 M cs.types.UInt8
 M cs.system.UriComponents
 M System.Diagnostics.ProcessModuleCollection

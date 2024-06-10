@@ -18,6 +18,7 @@ src\Type.cs
 src\haxe\iterators\ArrayIterator.cs
 src\Reflect.cs
 src\haxe\exceptions\NotImplementedException.cs
+src\haxe\ds\GenericStack.cs
 src\haxe\iterators\ArrayKeyValueIterator.cs
 src\haxe\ValueException.cs
 src\cs\internal\StringExt.cs
